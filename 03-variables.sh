@@ -13,7 +13,7 @@
 #echo "$Person1:: I am doing good. What are you learning?"
 #echo "$Person2:: I am learning shell-scription"
 
-Persion1=Anil
+Person1=AnilMidde
 Person2=Anu
 
 echo "$Person1:: Hello $Person2, How are you?"
