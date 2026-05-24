@@ -28,5 +28,6 @@ do
        dnf install $package -y &>> $LOGS_FILE
        VALIDATE $? "$package Installation"
   else
-      echo "$package installed skip for now"    
+      echo "$package installed skip for now"
+  fi    
 done
