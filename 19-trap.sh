@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+trap 'echo "there is an error in $LINE_NO, Command: $BASH_COMMAND"' ERR
+
+echo "Hello"
+echo "Thank you"
+echoo "error spelling"
+echo "it wont print"
