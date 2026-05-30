@@ -5,7 +5,7 @@
 #echo "Ramesh:: I am doing good, how are you doing?"
 #echo "Suresh:: I am doing good. What are you learning?"
 #echo "Ramesh:: I am learning shell-scription"
-#Persion1=Suresh
+#Persion1=Suresh # no space between the value and =
 #Person2=Ramesh
 
 #echo "$Person1:: Hello $Person2, How are you?"
@@ -13,10 +13,10 @@
 #echo "$Person1:: I am doing good. What are you learning?"
 #echo "$Person2:: I am learning shell-scription"
 
-Person1=AnilMidde
+Persion1=Anil
 Person2=Anu
 
 echo "$Person1:: Hello $Person2, How are you?"
 echo "$Person2:: I am doing good, how are you doing?"
 echo "$Person1:: I am doing good. What are you learning?"
-echo "$Person2:: I am learning shell-scription"
+echo "$Person2:: I am learning shell-scription"it 
