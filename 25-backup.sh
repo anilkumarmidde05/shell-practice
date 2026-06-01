@@ -53,4 +53,9 @@ log "Source directory: $SOURCE_DIR"
 log "Destination directory: $DEST_DIR"
 log "Number of days: $DAYS"
 
-#archieve them
+# verify if any files to zip
+
+if [ -z $FILES ]; then
+ log "no files to archive...$Y SKIPPING $N"
+
+fi
