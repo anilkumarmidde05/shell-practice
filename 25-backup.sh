@@ -55,10 +55,9 @@ log "Number of days: $DAYS"
 
 # verify if any files to zip
 
-if [ -z $FILES ]; then
+if [ -z ${FILES} ]; then
  log "no files to archive...$Y SKIPPING $N"
 else
-
  # app-logs-$timestamp.zip
  log "file found to archive: $FILES"
  TIMESTAMP=$(date +%F-%H-%M-%S)
