@@ -23,6 +23,6 @@ USAGE(){
 
 }
 
-if[ $# -lt 2 ]; then
+if [ $# -lt 2 ]; then
     USAGE
 fi
