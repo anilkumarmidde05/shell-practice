@@ -57,5 +57,12 @@ log "Number of days: $DAYS"
 
 if [ -z $FILES ]; then
  log "no files to archive...$Y SKIPPING $N"
+else
+
+ # app-logs-$timestamp.zip
+ log "file found to archive: $FILES"
+ TIMESTAMP=$(date +%F-%H-%M-%S)
+ ZIP_FILE-NAME="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
+ echo "Archieve Name: $ZIP_FILE_NAME"
 
 fi
