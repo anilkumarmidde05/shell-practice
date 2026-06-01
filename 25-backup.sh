@@ -9,7 +9,7 @@ Y="\e[33m"
 N="\e[0m"
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${3:-14} # 14 day is the default value if the user is not supplied
+DAYS=${3:-1} # 14 day is the default value if the user is not supplied
 
 if [ $USERID -ne 0 ]; then
    echo -e "$R please run this script with root user $N"
