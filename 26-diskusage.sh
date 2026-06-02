@@ -5,6 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 MESSAGE=""
+IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 DISK_THRESHOLD=3
@@ -21,3 +22,5 @@ do
 done <<< $DISK_USAGE
 
 echo -e "$MESSAGE"
+
+sh mail.sh "anilkumarmidde05@gmail.com" "High DISK Usage on $IP_ADDRESS" "$MESSAGE" "DISK_USAGE" "IP_ADDRESS" "DEV OPS TEAM"
