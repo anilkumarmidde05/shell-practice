@@ -16,7 +16,7 @@ do
    PARTITION=$(echo $line | awk '{print$7}')
    
     if [ "$USAGE" -ge "$DISK_THRESHOLD" ]; then
-       MESSAGE+="HIGH DISK usage on $PARTITION:$USAGE% <\br>" # here we are using the br to get the new line in email template which we are receiving instead of \n
+       MESSAGE+="HIGH DISK usage on $PARTITION: $USAGE% <br>" # here we are using the br to get the new line in email template which we are receiving instead of \n
     fi
 
 done <<< $DISK_USAGE
