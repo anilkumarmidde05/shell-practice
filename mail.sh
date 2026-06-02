@@ -9,12 +9,7 @@ TO_TEAM=$6
 SCRIPT_DIR=$PWD
 FINAL_MESSAGE_BODY=$(echo $MESSAGE_BODY | sed -e "s/'/'\\\\''/g")
 
-FINAL_MESSAGE=$(sed \
--e "s|TO_TEAM|$TO_TEAM|g" \
--e "s|ALERT_TYPE|$ALERT_TYPE|g" \
--e "s|Server_IP|$SERVER_IP|g" \
--e "s|Message|$MESSAGE_BODY|g" \
-$Script_DIR/template.html)
+FINAL_MESSAGE=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/Server_IP/$SERVER_IP/g" -e "s/Message/$MESSAGE_BODY/g" template.html)
 
 
 
