@@ -1,0 +1,23 @@
+#!/bin/bash
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+MESSAGE=""
+
+DISK_USAGE=$(df -hT | grep -v Filesystem)
+DISK_THRESHOLD=3
+
+while IFS read -r line
+do
+   USAGE= $(echo $line | awk '{print$6}' | cut -d "%" -f1)
+   PARTITION= $(echo $line | awk '{print$7}')
+   
+    if [ "$USAGE" -ge "$DISK_THRESHOLD" ]; then
+       MESSAGE="HIGH DISK usage on $PARTITION:$USAGE% \n"
+    fi
+
+done  <<< DISK_USAGE
+
+echo -e $MESSAGE
