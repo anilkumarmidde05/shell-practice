@@ -13,7 +13,7 @@ FINAL_MESSAGE=$(sed \
 -e "s|ALERT_TYPE|$ALERT_TYPE|g" \
 -e "s|Server_IP|$SERVER_IP|g" \
 -e "s|Message|$MESSAGE_BODY|g" \
-$Script_DIR/template.html)
+"$Script_DIR/template.html")
 
 
 
