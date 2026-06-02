@@ -7,6 +7,7 @@ ALERT_TYPE=$4
 SERVER_IP=$5
 TO_TEAM=$6
 SCRIPT_DIR=$PWD
+FINAL_MESSAGE_BODY=$(echo $MESSAGE_BODY | sed -e "s/'/'\\\\''/g")
 
 FINAL_MESSAGE=$(sed \
 -e "s|TO_TEAM|$TO_TEAM|g" \
